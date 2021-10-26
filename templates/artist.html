@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../style/artist.css">
+  <meta charset="utf-8">
+  <title>XD</title>
+
+</head>
+<body>
+    <div class="header">
+      <b><a href="/"> GROUPIE TRACKER </a></b>
+    </div>
+    <div class="container">
+      <!-- <ul> -->
+      <div class="info">
+        <img src="{{.Image}}" class="picture">
+
+        <br>
+
+        <div class="group_name_container">
+          <b class="group_name"> {{.Name}} </b>
+        </div>
+
+        <br>
+
+        <div class="group_members_container">
+          <b class="group_members">Members:</b>
+        </div>
+
+        <br>
+
+        <div class="members_container">
+          {{range .Members}}
+          <li class="members">{{.}}</li>
+          {{end}}
+        </div>
+
+        <br>
+
+        <div class="date">
+          <b class="creation"> Creation date: {{.CreationDate}} </b>
+        </div>
+
+        <br>
+
+        <div class="date">
+          <b class="creation"> Concert dates:</b>
+        </div>
+
+        <br>
+
+        <div class="members_container">
+          {{ range $key, $value := .DatesLocations}}
+          <li class="members"><strong>{{ $key }}</strong>: {{ $value }}</li>
+          {{ end }}
+        </div>
+
+      </div>
+      <!-- </ul> -->
+    </div>
+
+
+</body>
+
+</html>

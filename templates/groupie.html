@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>XD</title>
+</head>
+
+<body>
+  <div class="every">
+
+    <div class="header">
+
+      <div class="tracker">
+
+        <b>GROUPIE TRACKER</b>
+
+      </div>
+
+      <div class="label">
+
+        <form action="/search/" method="POST">
+          <b> SEARCH:</b>
+
+          <input type="text" name="myData" id="myData" list="myList" class="in" required="required">
+
+          <datalist id="myList">
+            {{ range . }}
+
+            <option>{{.Name}} - artist/band name</option>
+
+            {{range .Members}}
+            <option>{{.}} - members</option>
+            {{end}}
+
+            {{ range $key, $value := .DatesLocations}}
+            <option>{{ $key }} - locations</option>
+            {{ end }}
+
+            <option>{{.FirstAlbum}} - first album date</option>
+
+            <option>{{.CreationDate}} - creation date</option>
+
+            {{ end }}
+
+          </datalist>
+
+          <select name="options" id="">
+            <option value="">CHOOSE OPTION</option>
+            <option > artist/band name </option>
+            <option > members </option>
+            <option > first album date </option>
+            <option > creation date </option>
+          </select>
+
+          <input type="submit" value="SUBMIT" class="button">
+
+        </form>
+
+      </div>
+
+    </div>
+    <div class="container">
+
+      {{range .}}
+
+      <div class="all">
+
+        <div class="group">
+
+          <b><a href="/artists/{{.ID}}"><img src="{{.Image}}" class="picture"></a></b></br>
+
+        </div>
+
+        <b><a href="/artists/{{.ID}}" class="group_name">{{ .Name }}</a></b>
+
+      </div>
+
+      {{end}}
+    </div>
+  </div>
+</body>
+
+</html>

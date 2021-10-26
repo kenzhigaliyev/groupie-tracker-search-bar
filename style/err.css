@@ -1,0 +1,97 @@
+body {
+  background-image: url("black.jpg");
+  background-color: azure;
+}
+
+
+
+a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  background: linear-gradient(to right, white, grey 50%, black 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+a:hover {
+  background-position: 0 100%;
+}
+
+
+
+.type {
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 15000px) {
+  .header {
+    margin-bottom: 0px;
+    margin-left: 0%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.349);
+    font-size: 100px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+  .err {
+    padding: 25px;
+    width: 500px;
+    background-color: rgba(155, 152, 152, 0.614);
+    font-size: 35px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 1500px) {
+  .header {
+    margin-bottom: 0px;
+    margin-left: 0%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.349);
+    font-size: 55px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+  .err {
+    padding: 25px;
+    width: 375px;
+    background-color: rgba(155, 152, 152, 0.614);
+    font-size: 27px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    margin-bottom: 0px;
+    margin-left: 0%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.349);
+    font-size: 35px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+  .err {
+    padding: 25px;
+    width: 250px;
+    background-color: rgba(155, 152, 152, 0.614);
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+}

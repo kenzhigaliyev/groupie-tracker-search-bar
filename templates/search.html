@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>XD</title>
+</head>
+
+<body>
+  <div class="every">
+
+    <div class="header">
+
+      <div class="tracker">
+
+        <b><a href="/" class="head"> GROUPIE TRACKER </a></b>
+
+      </div>
+
+    </div>
+    <div class="container">
+
+      <div class="all">
+
+        <div class="group">
+
+          <b><a href="/artists/{{.ID}}"><img src="{{.Image}}" class="picture"></a></b></br>
+
+        </div>
+
+        <b><a href="/artists/{{.ID}}" class="group_name">{{ .Name }}</a></b>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
