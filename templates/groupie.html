@@ -24,7 +24,7 @@
         <form action="/search/" method="POST">
           <b> SEARCH:</b>
 
-          <input type="text" name="myData" id="myData" list="myList" class="in" required="required">
+          <input type="text" name="myData" id="myData" list="myList" class="in" required="required" autocomplete="off">
 
           <datalist id="myList">
             {{ range . }}
@@ -51,6 +51,7 @@
             <option value="">CHOOSE OPTION</option>
             <option > artist/band name </option>
             <option > members </option>
+            <option > locations </option>
             <option > first album date </option>
             <option > creation date </option>
           </select>
