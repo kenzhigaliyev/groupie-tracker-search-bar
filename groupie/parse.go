@@ -26,6 +26,7 @@ func Err(Str string, Status int, w http.ResponseWriter, r *http.Request) {
 }
 
 func Media(w http.ResponseWriter, r *http.Request) {
+	Func()
 
 	Searching.Values = nil
 

@@ -43,16 +43,16 @@ func SearchFor(str2 string, str1 string) {
 	for index, _ := range ArtistsNew {
 		switch str1 {
 		case "artist/band name":
-			if ArtistsNew[index].Name == str2 {
+			if strings.Contains(ArtistsNew[index].Name, str2) {
 				Searching.AddItem(ArtistsNew[index])
 			}
 		case "first album date":
-			if ArtistsNew[index].FirstAlbum == str2 {
+			if strings.Contains(ArtistsNew[index].FirstAlbum, str2) {
 				Searching.AddItem(ArtistsNew[index])
 			}
 		case "locations":
 			for res := range ArtistsNew[index].DatesLocations {
-				if res == str2 {
+				if strings.Contains(res, str2) {
 					Searching.AddItem(ArtistsNew[index])
 				}
 			}
@@ -64,7 +64,7 @@ func SearchFor(str2 string, str1 string) {
 			}
 		case "members":
 			for _, res := range ArtistsNew[index].Members {
-				if res == str2 {
+				if strings.Contains(res, str2) {
 					Searching.AddItem(ArtistsNew[index])
 				}
 			}
